@@ -18,8 +18,8 @@ exports.get_employee_data = async (request, response) => {
 }
 
 exports.get = async (request, response) => {
-    const employees = await Employee.find({});
-    return response.status(200).json(employees);
+    const employee_data = await Employee.find({});
+    return response.status(200).json(employee_data );
 
 }
 
@@ -46,7 +46,7 @@ exports.update = async (request, response) => {
     employees .employee_age = employee_age;
     employees .employee_salary = employee_salary;
     employees .profile_image = profile_image;
-    employees .save();
+    await employees .save();
     return response.status(200).json(employees );
     }
 }

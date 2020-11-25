@@ -2,9 +2,9 @@ const express = require('express');
 const route = express.Router();
 
 const controller = require('../Controller/controller_for_employee.js');
-const { routes } = require('../index.js');
+// const { routes } = require('../index.js');
 
-route.get('/load', controller.get_api_data);
+route.get('/load', controller.get_employee_data);
 
 route.get('/employee', controller.get);
 

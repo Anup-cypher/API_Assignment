@@ -2,16 +2,16 @@ const mongoose = require('mongoose');
 
 mongoose.Promise=global.Promise;
 
-let dbConnetion = async () => {
+let dbConnection = async () => {
 	try{
-		await mongoose.connect('mongodb://localhost/employee', {useNewUrlParser: true});
+		await mongoose.connect('mongodb://localhost/employees', {useNewUrlParser: true});
         console.log('Database connection succeed');
     } catch(e) {
 		console.log('Sorry could not connet database due to ', e);
 	}
 };
 
-dbConnetion();
+dbConnection();
 
 
 require('./model/model_employee.js');

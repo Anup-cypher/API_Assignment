@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema();
+// mongoose.connect('mongodb://localhost');
+const Schema = mongoose.Schema;
 const employeeSchema = new Schema({
     id: {type: String},
     employee_name: {type: String},
